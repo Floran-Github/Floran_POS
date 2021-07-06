@@ -26,7 +26,7 @@ Python v.3.8+
 Copy Paste the following commands to clone the repo
 
 ```bash
-    git clone https://github.com/bhagwanZaki/react-dj-todo.git
+    https://github.com/Floran-Github/Floran_POS.git
 ```
 Go inside the directory and install the module from requirements.txt
 

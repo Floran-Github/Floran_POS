@@ -23,6 +23,17 @@ Python v.3.8+
 
 ### Clone Repository
 
+create virtual env
+```bash
+    pip install virtualenvwrapper-win
+    mkvirtualenv reactdj
+```
+
+To activate environment
+```bash
+    workon reactdj
+```
+
 Copy Paste the following commands to clone the repo
 
 ```bash

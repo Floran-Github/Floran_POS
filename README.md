@@ -29,10 +29,20 @@ create virtual env
     pip install virtualenvwrapper-win
     mkvirtualenv reactdj
 ```
+for linux use this command
+```bash
+    apt-get install python3-venv  
+    python3 -m venv reactdj
+```
 
 To activate environment
 ```bash
     workon reactdj
+```
+
+To activate environment
+```bash
+    source reactdj/bin/activate
 ```
 
 Copy Paste the following commands to clone the repo
@@ -70,6 +80,11 @@ Go inside the directory and install the module from requirements.txt
   Now Run the script
   
   ```bash
+    npm run dev
+  ```
+  If above give webpack Permission Denied error in linux, then run this command
+  ```bash
+    npm install --save-dev webpack
     npm run dev
   ```
   

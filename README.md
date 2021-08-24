@@ -40,7 +40,7 @@ To activate environment
     workon reactdj
 ```
 
-To activate environment
+To activate environment in linux
 ```bash
     source reactdj/bin/activate
 ```
@@ -82,6 +82,7 @@ Go inside the directory and install the module from requirements.txt
   ```bash
     npm run dev
   ```
+  
   If above give webpack Permission Denied error in linux, then run this command
   ```bash
     npm install --save-dev webpack

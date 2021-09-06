@@ -1,6 +1,4 @@
 # Floran_POS
-### Ehtesham
-
 ## Introduction
 
 Floran POS is an ERP solution for Hotel and lounge to manage their business from any device instead of buying POS System

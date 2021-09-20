@@ -21,6 +21,8 @@ import Login from "./users/Login";
 import Register from "./users/Register";
 import AuthReqRoute from "./commons/AuthReqRoute";
 import { loadProfile, loadUser } from "../actions/auth";
+import SupplierPage from "./Pages/supplier/SupplierPage";
+import SupplierCreate from "./Pages/supplier/SupplierCreate";
 class App extends Component {
   async componentDidMount() {
     await store.dispatch(loadUser());
@@ -45,6 +47,9 @@ class App extends Component {
                   <AuthReqRoute exact path="/product" component={Productpage}></AuthReqRoute>
                   <AuthReqRoute path="/product/create" component={ProductCreate}></AuthReqRoute>
                   <AuthReqRoute exact path="/product/detail" component={ProductDetail}></AuthReqRoute>
+
+                  <AuthReqRoute exact path="/supplier" component={SupplierPage}></AuthReqRoute>
+                  <AuthReqRoute path="/supplier/create" component={SupplierCreate}></AuthReqRoute>
                 </div>
               </Fragment>
             </Switch>

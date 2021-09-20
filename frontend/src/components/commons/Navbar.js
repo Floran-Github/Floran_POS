@@ -29,15 +29,21 @@ export class Navbar extends Component {
                 </li>
                     <li className="mainNav-item">
                         <Link to="/music" className="nav-link">
-                        <i className="fa-secondary fas fa-music"></i>
+                        <i className="fa-secondary far fa-chart-bar"></i>
                         <span className="link-text">Dashboard</span>
                         </Link>
                     </li>
          
                     <li className="mainNav-item">
-                        <a href="#" className="nav-link">
-                        <i className="fa-primary fas fa-list-ul"></i>
+                        <a href="/product" className="nav-link">
+                        <i className="fa-primary fab fa-product-hunt"></i>
                         <span className="link-text">Product</span>
+                        </a>
+                    </li>
+                    <li className="mainNav-item">
+                        <a href="/supplier" className="nav-link">
+                        <i className="fa-primary far fa-handshake"></i>
+                        <span className="link-text">Supplier</span>
                         </a>
                     </li>
                     <li className="mainNav-item">

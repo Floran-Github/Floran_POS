@@ -9,7 +9,6 @@ export class Productpage extends Component {
     static proptypes = {
         products: PropTypes.array.isRequired,
         getProducts: PropTypes.func.isRequired,
-        isAuthenticated: PropTypes.bool,
     }
 
     componentDidMount(){
@@ -80,8 +79,7 @@ export class Productpage extends Component {
 }
 
 const mapStateToProps = state => ({
-    products: state.product.products,
-    isAuthenticated: state.auth.isAuthenticated
+    products: state.product.products
 })
 
 export default connect(mapStateToProps,{getProducts})(Productpage)

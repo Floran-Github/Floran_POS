@@ -23,7 +23,9 @@ export default function(state=initialState,action){
         case UPDATE_PROUCT:
             return{
                 ...state,
-                products: state.products.map((product) => product.id === action.payload.id ? action.payload : product)
+                products: state.products.map(
+                    (product) => product.id === action.payload.id ? action.payload : product
+                )
             }
         default:
             return state

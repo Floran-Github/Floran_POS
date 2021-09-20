@@ -29,10 +29,17 @@ class LoginAPI(generics.GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data
-
+        print(user.id)
+        user_profile = Hotel_detail.objects.filter(user_linked=user.id).values()
+        if user_profile:
+            profileExists = True
+        else:
+            profileExists = False
         return Response({
             "user": userSerializer(user, context=self.get_serializer_context()).data,
-            "token": AuthToken.objects.create(user)[1]
+            "token": AuthToken.objects.create(user)[1],
+            "user_profile": user_profile,
+            "profileExists":profileExists
 
         })
     

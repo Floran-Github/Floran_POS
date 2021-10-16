@@ -102,6 +102,18 @@ body::-webkit-scrollbar-thumb {
 .link-text {
   display: none;
   margin-left: 1rem;
+  transition: var(--transition-speed);
+}
+  
+.nav-header {
+  display: none;
+  margin-left: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  transition: var(--transition-speed);
+  transition-delay: 1s;
+
 }
 
 .nav-link svg {
@@ -141,6 +153,8 @@ body::-webkit-scrollbar-thumb {
   transition: var(--transition-speed);
 }
 
+
+
 .mainNav-nav .logo .logo-text
 {
   display: inline;
@@ -178,6 +192,11 @@ body::-webkit-scrollbar-thumb {
 
 .mainNav:hover .link-text {
   display: inline;
+}
+.mainNav:hover .nav-header {
+  display: inline;
+  cursor: pointer;
+  transition-delay: 1s;
 }
 
 .mainNav:hover .logo svg

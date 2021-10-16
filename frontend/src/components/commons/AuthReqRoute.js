@@ -9,7 +9,7 @@ const AuthReqRoute = ({ component: Component , auth, ...rest }) => (
             if(auth.isLoading){
                 return <h2>Loading...</h2>
             }else if(auth.token === null){
-                return <Redirect to='/login/' />
+                return <Redirect to='/login' />
             } else if (auth.isAuthenticated) {
                 return <Component {...props} />
             }

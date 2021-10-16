@@ -23,7 +23,6 @@ export const tokenConfig = getState => {
 
 // LoadUser function that will be called whenever new website is loaded for user authentication purpose
 export const loadUser = () => (dispatch,getState) => {
-    console.log(getState)
     dispatch({ type: USER_LOADING});
 
     axios.get('/api/auth/user',tokenConfig(getState)).then(
@@ -64,15 +63,12 @@ export const loadProfile = () => (dispatch,getState) => {
 export const profileLoad = () => (dispatch,getState) => {
     axios.get('/api/auth/hotel_detail/',tokenConfig(getState)).then(
         res => {
-            console.log('profile called')
             dispatch({
                 type: PROFILE_SUCCESS,
                 payload: res.data
             })
         }).catch(
             err => {
-            console.log('profile failed')
-            console.log(err)
             dispatch({
                 type:PROFILE_FAIL
             })
@@ -83,7 +79,6 @@ export const profileLoad = () => (dispatch,getState) => {
 // Login function
 export const login = (username,password) => (dispatch,getState) =>{
     //headers
-    console.log('loggin called')
     const config = {
         headers: {
             'Content-Type': 'application/json'
@@ -98,7 +93,6 @@ export const login = (username,password) => (dispatch,getState) =>{
    
     axios.post('/api/auth/login',body,config).then(
         res => {
-            console.log('logged in')
             dispatch({
                 type: LOGIN_SUCCESS,
                 payload: res.data
@@ -110,10 +104,6 @@ export const login = (username,password) => (dispatch,getState) =>{
                 type: LOGIN_FAIL
             });
     })
-    
-    console.log(getState().auth.token)
-
-    
 }
 
 //logout user

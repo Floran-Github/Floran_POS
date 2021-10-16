@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'product_api.apps.ProductApiConfig',
     'supplier_api.apps.SupplierApiConfig',
+    'purchases_api.apps.PurchasesApiConfig',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)

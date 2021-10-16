@@ -5,12 +5,7 @@ import { Link, Redirect } from 'react-router';
 
 
 export class ProductDetail extends Component {
-  static proptypes = {
-    products: PropTypes.array.isRequired,
-    getProducts: PropTypes.func.isRequired,
-    isAuthenticated: PropTypes.bool,
-  };
-
+ 
   render() {
     const { product } = this.props.location.state;
 
@@ -41,10 +36,7 @@ export class ProductDetail extends Component {
                   </span>
                   <h4>Description</h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Labore voluptas unde animi illum necessitatibus. Natus in
-                    provident beatae, laborum voluptas cumque quisquam eos
-                    perferendis ab dolorem quae, dicta dignissimos incidunt.
+                   {product.product_description}
                   </p>
                 </div>
                 <div className='col-md-6'>
@@ -61,8 +53,5 @@ export class ProductDetail extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated,
-});
 
-export default connect(mapStateToProps)(ProductDetail);
+export default ProductDetail;

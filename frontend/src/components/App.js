@@ -23,15 +23,16 @@ import AuthReqRoute from "./commons/AuthReqRoute";
 import { loadProfile, loadUser } from "../actions/auth";
 import SupplierPage from "./Pages/supplier/SupplierPage";
 import SupplierCreate from "./Pages/supplier/SupplierCreate";
+import PurchaseBilling from "./Pages/purchase_billing/PurchaseBilling";
+import PurchasePage from "./Pages/purchase_billing/PurchasePage";
+import outstatebill from "./Pages/purchase_billing/outstatebill";
 class App extends Component {
   async componentDidMount() {
     await store.dispatch(loadUser());
     await store.dispatch(loadProfile());
-    console.log('compfffa')
   }
 
   render() {
-    console.log('main app fucking')
     return (
       <Provider store={store}>
         <Router>
@@ -50,6 +51,10 @@ class App extends Component {
 
                   <AuthReqRoute exact path="/supplier" component={SupplierPage}></AuthReqRoute>
                   <AuthReqRoute path="/supplier/create" component={SupplierCreate}></AuthReqRoute>
+                  
+                  <AuthReqRoute exact path="/purchase" component={PurchasePage}></AuthReqRoute>
+                  <AuthReqRoute exact path="/purchase/bill" component={PurchaseBilling}></AuthReqRoute>
+                  <AuthReqRoute exact path="/purchase/outstate/inv" component={outstatebill}></AuthReqRoute>
                 </div>
               </Fragment>
             </Switch>

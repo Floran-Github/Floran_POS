@@ -1,8 +1,32 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
+import PropTypes from 'prop-types'
+import { logout } from '../../actions/auth'
+import { connect } from 'react-redux'
 export class Mainpage extends Component {
+
+    static proptypes = {
+        auth: PropTypes.object.isRequired,
+        logout: PropTypes.func.isRequired
+    }
+
+
     render() {
+
+        const { isAuthenticated } = this.props.auth
+        const authLinks = (
+            <div>
+                <Link to='/product' className='button'> Home </Link>
+                <button onClick={this.props.logout} className='btn button'>Logout</button>
+            </div>
+        )
+
+        const guestLinks = (
+            <div>
+                <Link to='/register' className="button">Register</Link>
+                <Link to='/login' className="button">Login</Link>
+            </div>
+        )
         return (
             <div>
                 <section id="home">
@@ -21,20 +45,13 @@ export class Mainpage extends Component {
                 <rect x="97" y="213" width="19" height="21" fill="#668CCD"/>
                 <rect x="130" y="213" width="19" height="21" fill="#668CCD"/>
                 </svg>
-
-
                 </div>
                 <img src={"/static/pic/bg.jpg"} className='bg' />
                 <div className="content" id="home" data-aos="fade-up">
                     <h2>Floran <br></br> Point of Sale</h2>
-                    <h4>Manage your hotel from one point</h4>
-                        
-                    <div>
-                        <Link to='/register' className="button">Register</Link>
-                        <Link to='/login' className="button">Login</Link>
-                    </div>
+                    <h4>Manage your hotel from one point</h4>               
+                    {isAuthenticated ? authLinks : guestLinks}
                 </div>
-                
                 </section>
 
             </div>
@@ -42,4 +59,7 @@ export class Mainpage extends Component {
     }
 }
 
-export default Mainpage
+const mapStateToProps = state => ({
+    auth: state.auth,
+  })
+export default connect(mapStateToProps, { logout })(Mainpage)

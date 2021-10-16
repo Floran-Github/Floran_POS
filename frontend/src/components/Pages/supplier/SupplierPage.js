@@ -31,7 +31,7 @@ export class SupplierPage extends Component {
                     <div className="row">
                         <div className="col-10">
                             <h2>
-                                Suppliers
+                                Vendors
                             </h2>
                         </div>
                         <div className="col-2">

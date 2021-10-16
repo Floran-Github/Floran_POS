@@ -22,7 +22,6 @@ export class ProductCreate extends Component {
 
     onSubmit = e =>{
         e.preventDefault();
-        console.log(this.props)
         var {product_name,product_description,product_quantity,product_price} = this.state;
         product_quantity = parseInt(product_quantity)
         product_price = parseInt(product_price)

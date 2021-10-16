@@ -33,7 +33,13 @@ export class Navbar extends Component {
                         <span className="link-text">Dashboard</span>
                         </Link>
                     </li>
-         
+                    <li>
+                        <span className="nav-header">
+                            <u>
+                                RetailManagement
+                            </u>
+                        </span>
+                    </li>
                     <li className="mainNav-item">
                         <a href="/product" className="nav-link">
                         <i className="fa-primary fab fa-product-hunt"></i>
@@ -43,7 +49,13 @@ export class Navbar extends Component {
                     <li className="mainNav-item">
                         <a href="/supplier" className="nav-link">
                         <i className="fa-primary far fa-handshake"></i>
-                        <span className="link-text">Supplier</span>
+                        <span className="link-text">Vendor</span>
+                        </a>
+                    </li>
+                    <li className="mainNav-item">
+                        <a href="/purchase" className="nav-link">
+                        <i className="fa-primary far fa-handshake"></i>
+                        <span className="link-text">Purchase</span>
                         </a>
                     </li>
                     <li className="mainNav-item">

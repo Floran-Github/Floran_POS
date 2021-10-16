@@ -33,7 +33,6 @@ export class Register extends Component {
                 email
             }
             await this.props.register(newUser)
-            console.log('register')
             this.setState({isregister: true})
         }
         

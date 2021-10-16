@@ -21,7 +21,6 @@ export class SupplierCreate extends Component {
     onSubmit = e => {
         e.preventDefault();
         var { name,address,gst_number,mobile_number } = this.state;
-        console.log(name,address,gst_number,mobile_number);
 
         var gstinformat = new RegExp('^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$');
         var mobileinformat = new RegExp('^[0-9]{10,15}$');
@@ -62,7 +61,7 @@ export class SupplierCreate extends Component {
             <div className='col-12'>
                 <div className="row">
                     <h2>
-                        Add New Supplier
+                        Add New Vendor
                     </h2>
                 </div>
                 <div className="row">

@@ -24,11 +24,9 @@ export class Login extends Component {
 
   };
   render() {
-    console.log(this.props.isAuthenticated);
     
     if (this.props.isAuthenticated) {
 
-      console.log(this.props.profileExists);
       
       if(this.props.profileExists){
         return <Redirect to='/product' />;

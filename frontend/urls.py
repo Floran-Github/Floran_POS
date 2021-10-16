@@ -12,4 +12,8 @@ urlpatterns = [
 
     path('supplier', index),
     path('supplier/create', index),
+
+    path('purchase', index),
+    path('purchase/bill', index),
+    path('purchase/outstate/inv', index),
 ]

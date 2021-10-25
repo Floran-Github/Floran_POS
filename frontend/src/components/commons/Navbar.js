@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class Navbar extends Component {
-    render() {
-        return (
-            <div className="row">
-
-            <nav className='mainNav'>
+  render() {
+    return (
+      <div className="row">
+              <nav className='mainNav'>
                 <ul className='mainNav-nav'>
                 <li className="logo">
                     <div className="nav-link">
@@ -22,13 +21,10 @@ export class Navbar extends Component {
                             <rect x="405.189" y="160.414" width="45.1" height="254.191" rx="22.55" transform="rotate(75.5589 405.189 160.414)" fill="white"/>
                             <ellipse cx="105.5" cy="452.5" rx="80.5" ry="78.5" fill="white"/>
                         </svg>
-
-
-
                     </div>
                 </li>
                     <li className="mainNav-item">
-                        <Link to="/music" className="nav-link">
+                        <Link to="/dashboard" className="nav-link">
                         <i className="fa-secondary far fa-chart-bar"></i>
                         <span className="link-text">Dashboard</span>
                         </Link>
@@ -85,9 +81,9 @@ export class Navbar extends Component {
                     </li>
                 </ul>
             </nav>
-            </div>
+      </div>
         )
     }
 }
 
-export default Navbar
+export default Navbar;

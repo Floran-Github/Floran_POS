@@ -29,6 +29,7 @@ import outstatebill from "./Pages/purchase_billing/outstatebill";
 import Inventory from "./Pages/restaurant_inventory/Inventory";
 import Create_order_page from "./Pages/restaurant_inventory/Create_order_page";
 import OrderPage from "./Pages/restaurant_inventory/OrderPage";
+import Dashboard from "./Pages/dashboard/Dashboard";
 class App extends Component {
   async componentDidMount() {
     await store.dispatch(loadUser());
@@ -48,9 +49,25 @@ class App extends Component {
               <Fragment>
                 <Navbar />
                 <div className=" mainContainer">
-                  <AuthReqRoute exact path="/product" component={Productpage}></AuthReqRoute>
-                  <AuthReqRoute path="/product/create" component={ProductCreate}></AuthReqRoute>
-                  <AuthReqRoute exact path="/product/detail" component={ProductDetail}></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/dashboard"
+                    component={Dashboard}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/product"
+                    component={Productpage}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    path="/product/create"
+                    component={ProductCreate}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/product/detail"
+                    component={ProductDetail}
+                  ></AuthReqRoute>
 
                   <AuthReqRoute exact path="/supplier" component={SupplierPage}></AuthReqRoute>
                   <AuthReqRoute path="/supplier/create" component={SupplierCreate}></AuthReqRoute>

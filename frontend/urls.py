@@ -16,4 +16,8 @@ urlpatterns = [
     path('purchase', index),
     path('purchase/bill', index),
     path('purchase/outstate/inv', index),
+    
+    path('restaurant/inventory', index),
+    path('restaurant/order', index),
+    path('restaurant/order/create', index),
 ]

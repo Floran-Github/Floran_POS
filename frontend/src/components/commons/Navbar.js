@@ -36,6 +36,25 @@ export class Navbar extends Component {
                     <li>
                         <span className="nav-header">
                             <u>
+                                Restaurant_Management
+                            </u>
+                        </span>
+                    </li>
+                    <li className="mainNav-item">
+                        <a href="/restaurant/inventory" className="nav-link">
+                        <i className="fas fa-warehouse"></i>
+                        <span className="link-text">Restaurant Inventory</span>
+                        </a>
+                    </li>
+                    <li className="mainNav-item">
+                        <a href="/restaurant/order" className="nav-link">
+                        <i className="fas fa-pallet"></i>
+                        <span className="link-text">Place Order</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span className="nav-header">
+                            <u>
                                 RetailManagement
                             </u>
                         </span>
@@ -43,7 +62,7 @@ export class Navbar extends Component {
                     <li className="mainNav-item">
                         <a href="/product" className="nav-link">
                         <i className="fa-primary fab fa-product-hunt"></i>
-                        <span className="link-text">Product</span>
+                        <span className="link-text">Product Inventory</span>
                         </a>
                     </li>
                     <li className="mainNav-item">
@@ -54,7 +73,7 @@ export class Navbar extends Component {
                     </li>
                     <li className="mainNav-item">
                         <a href="/purchase" className="nav-link">
-                        <i className="fa-primary far fa-handshake"></i>
+                        <i className="fas fa-truck-moving"></i>
                         <span className="link-text">Purchase</span>
                         </a>
                     </li>

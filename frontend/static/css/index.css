@@ -311,7 +311,7 @@ section .content .button:hover {
 }
 .inputButton:hover {
   text-decoration: none;
-  background-color: #972853;
+  background-color: #f25994;
   color: #fff;
   border: 1px solid #fff;
   transform: 0.5 ease-in;
@@ -330,6 +330,16 @@ section .content .button:hover {
 .link:hover{
   color: #20457e;
 }
+
+.order_section{
+  width: 100%;
+}
+.order{
+  position: fixed;
+  /* width:inherit */
+  /* width: 100%; */
+}
+
 
 @media (max-width: 800px) {
   section .bg {

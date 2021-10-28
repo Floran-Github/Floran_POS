@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductPurchased = () => {
   return (
-    <div className="w-50 mr-3 p-2">
+    <div className="w-100 mr-3 p-2">
       <p className="fs-2 fw-bold">Most Purchased Product (Current Month)</p>
       <div className="table-responsive">
         <table

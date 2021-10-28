@@ -5,7 +5,7 @@ const CurrentPurchase = () => {
 
   return (
     <div
-      className={`d-flex justify-content-between align-items-center w-50 h-100 p-4 bg-${bgColor}`}
+      className={`d-flex justify-content-between align-items-center w-100 h-100 p-4 bg-${bgColor}`}
     >
       <p className="mr-3 fs-4">Current Month Total Purchase</p>
       <div className="d-flex align-items-center">

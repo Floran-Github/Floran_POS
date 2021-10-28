@@ -23,12 +23,7 @@ export class Navbar extends Component {
                         </svg>
                     </div>
                 </li>
-                    <li className="mainNav-item">
-                        <Link to="/dashboard" className="nav-link">
-                        <i className="fa-secondary far fa-chart-bar"></i>
-                        <span className="link-text">Dashboard</span>
-                        </Link>
-                    </li>
+                    
                     <li>
                         <span className="nav-header">
                             <u>
@@ -56,14 +51,20 @@ export class Navbar extends Component {
                         </span>
                     </li>
                     <li className="mainNav-item">
+                        <Link to="/dashboard" className="nav-link">
+                        <i className="far fa-chart-bar"></i>
+                        <span className="link-text">Retail Dashboard</span>
+                        </Link>
+                    </li>
+                    <li className="mainNav-item">
                         <a href="/product" className="nav-link">
-                        <i className="fa-primary fab fa-product-hunt"></i>
+                        <i className="fab fa-product-hunt"></i>
                         <span className="link-text">Product Inventory</span>
                         </a>
                     </li>
                     <li className="mainNav-item">
                         <a href="/supplier" className="nav-link">
-                        <i className="fa-primary far fa-handshake"></i>
+                        <i className="far fa-handshake"></i>
                         <span className="link-text">Vendor</span>
                         </a>
                     </li>

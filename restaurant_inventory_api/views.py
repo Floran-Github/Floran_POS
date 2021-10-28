@@ -20,13 +20,18 @@ class GETfloorInventoryAPI(views.APIView):
     ]
 
     def get(self,request,format=None):
-        data = FloorInventory.objects.filter(user_linked=self.request.user).values()
-
-        return Response({"floorinventorydata":data},status=status.HTTP_200_OK)
+        data = FloorInventory.objects.filter(user_linked=self.request.user)
+        prddata=[]
+        for i in data:
+            prddata.append([i.product.product_name,i.product.product_price])
+        print(data)
+        return Response({"floorinventory":data.values(),"invPrdData":prddata},status=status.HTTP_200_OK)
 
 class orderAPI(views.APIView):
     permission_classes = [
         permissions.IsAuthenticated
     ]
-    
-    
+    def post(self,requst,format=None):
+        data = request.data['order_data']
+        
+        pass

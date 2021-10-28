@@ -1,7 +1,26 @@
 import React, { Component,Fragment } from 'react'
-
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getFloorInventoryItems } from '../../../actions/floorinventory';
 export class Inventory extends Component {
+
+    componentDidMount(){
+        this.props.getFloorInventoryItems();
+    }
+
     render() {
+        var InventoryItems;
+        var invPrdData;
+        if (this.props.floorinventoryItem.length === 0 && this.props.floorinventoryItem[0] === 0) {
+            InventoryItems = [];
+            invPrdData = [];
+        } else {
+            InventoryItems = this.props.floorinventoryItem;
+            invPrdData = this.props.invPrdData;
+
+        }
+        console.log(this.props.floorinventoryItem)
+
         return (
             <Fragment>
                 <div className="col-12">
@@ -28,36 +47,16 @@ export class Inventory extends Component {
                                 </tr>
                             </thead>
                             <tbody className="table-light">
-                                <tr key='1'>
-                                    <td>1</td>
-                                    <td>Wheat</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr key='2'>
-                                    <td>1</td>
-                                    <td>Wheat</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr key='3'>
-                                    <td>1</td>
-                                    <td>Wheat</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr key='4'>
-                                    <td>1</td>
-                                    <td>Wheat</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                </tr>
-                                <tr key='5'>
-                                    <td>1</td>
-                                    <td>Wheat</td>
-                                    <td>12</td>
-                                    <td>12</td>
-                                </tr>
+                                {
+                                    InventoryItems.map((items,index) => (
+                                        <tr key={index}>
+                                            <td>{index+1}</td>
+                                            <td>{invPrdData[index][0]}</td>
+                                            <td>{items.qty}</td>
+                                            <td>{invPrdData[index][1]}</td>
+                                        </tr>
+                                    ))
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -67,4 +66,9 @@ export class Inventory extends Component {
     }
 }
 
-export default Inventory
+const mapStateToProps = state => ({
+    floorinventoryItem: state.floorinventory.floorinventory,
+    invPrdData: state.floorinventory.invPrdData
+})
+
+export default connect(mapStateToProps,{getFloorInventoryItems})(Inventory)

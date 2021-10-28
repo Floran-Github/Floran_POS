@@ -7,4 +7,5 @@ from rest_framework import routers, urlpatterns
 
 urlpatterns = [
     path('',GETfloorInventoryAPI.as_view()),
+    path('order',orderAPI.as_view()),
 ]

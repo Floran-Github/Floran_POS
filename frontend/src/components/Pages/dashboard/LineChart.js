@@ -30,8 +30,8 @@ const options = {
 };
 
 const LineChart = () => (
-  <div className="p-4 border mb-3">
-    <Line data={data} options={options} width={1400} height={500} />
+  <div className="p-4 border mb-3 container-fluid mx-auto">
+    <Line data={data} options={options} width={100} height={55} />
   </div>
 );
 

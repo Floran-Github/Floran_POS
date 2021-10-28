@@ -29,17 +29,17 @@ const data = {
 };
 
 const PieChart = () => (
-  <div className="d-flex flex-column w-50">
+  <div className="d-flex flex-column w-100">
     <div className="header p-2">
       <p className="title fs-2 fw-bold">
         Supplier Overall Purchase Info (Current Month)
       </p>
     </div>
-    <div className="w-50 mx-auto">
+    <div className="w-auto mx-auto">
       <Pie
         data={data}
-        width={10}
-        height={10}
+        width={300}
+        height={300}
         options={{
           responsive: true,
           maintainAspectRatio: true,

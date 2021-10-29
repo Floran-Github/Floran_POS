@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'product_api.apps.ProductApiConfig',
     'supplier_api.apps.SupplierApiConfig',
     'purchases_api.apps.PurchasesApiConfig',
+    'dashboard.apps.DashboardConfig',
     'restaurant_inventory_api.apps.RestaurantInventoryApiConfig',
 ]
 REST_FRAMEWORK = {

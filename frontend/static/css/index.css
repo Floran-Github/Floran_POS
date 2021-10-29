@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
 .mainNav {
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width 600ms ease;
+  transition: width 300ms ease;
 }
 
 .mainNav {
@@ -42,7 +42,9 @@ body::-webkit-scrollbar-thumb {
   z-index: 1000;
 }
 
-
+.cursor:hover{
+  cursor: pointer;
+}
 .mainNav-nav {
   list-style: none;
   padding: 0;

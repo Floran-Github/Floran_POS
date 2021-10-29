@@ -29,7 +29,6 @@ class LoginAPI(generics.GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data
-        print(user.id)
         user_profile = Hotel_detail.objects.filter(user_linked=user.id).values()
         if user_profile:
             profileExists = True

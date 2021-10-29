@@ -14,5 +14,4 @@ class productAPI(viewsets.ModelViewSet):
         return self.request.user.product.all()
 
     def perform_create(self, serializer):
-        print(serializer)
         serializer.save(user_linked=self.request.user)

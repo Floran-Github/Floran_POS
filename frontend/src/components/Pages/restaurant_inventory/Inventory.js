@@ -19,7 +19,6 @@ export class Inventory extends Component {
             invPrdData = this.props.invPrdData;
 
         }
-        console.log(this.props.floorinventoryItem)
 
         return (
             <Fragment>

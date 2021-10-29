@@ -20,7 +20,6 @@ class purchaseApi(APIView):
         })
         
     def post(self, request, format=None):
-        print(request.data)
         supplier_id = request.data['supplier_id']
         inv_number = request.data['invNumber']
         inv_date = request.data['invDate']
@@ -117,7 +116,6 @@ class purchaseApi(APIView):
                 return Response({'message':'all good'},status=status.HTTP_200_OK)
                     
             except Exception as e:
-                print(e)
                 return Response({'error':e},status=status.HTTP_400_BAD_REQUEST)
 
         else:

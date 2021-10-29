@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'supplier_api.apps.SupplierApiConfig',
     'purchases_api.apps.PurchasesApiConfig',
     'dashboard.apps.DashboardConfig',
+    'restaurant_inventory_api.apps.RestaurantInventoryApiConfig',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)

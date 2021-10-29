@@ -26,6 +26,9 @@ import SupplierCreate from "./Pages/supplier/SupplierCreate";
 import PurchaseBilling from "./Pages/purchase_billing/PurchaseBilling";
 import PurchasePage from "./Pages/purchase_billing/PurchasePage";
 import outstatebill from "./Pages/purchase_billing/outstatebill";
+import Inventory from "./Pages/restaurant_inventory/Inventory";
+import Create_order_page from "./Pages/restaurant_inventory/Create_order_page";
+import OrderPage from "./Pages/restaurant_inventory/OrderPage";
 import Dashboard from "./Pages/dashboard/Dashboard";
 class App extends Component {
   async componentDidMount() {
@@ -66,31 +69,15 @@ class App extends Component {
                     component={ProductDetail}
                   ></AuthReqRoute>
 
-                  <AuthReqRoute
-                    exact
-                    path="/supplier"
-                    component={SupplierPage}
-                  ></AuthReqRoute>
-                  <AuthReqRoute
-                    path="/supplier/create"
-                    component={SupplierCreate}
-                  ></AuthReqRoute>
-
-                  <AuthReqRoute
-                    exact
-                    path="/purchase"
-                    component={PurchasePage}
-                  ></AuthReqRoute>
-                  <AuthReqRoute
-                    exact
-                    path="/purchase/bill"
-                    component={PurchaseBilling}
-                  ></AuthReqRoute>
-                  <AuthReqRoute
-                    exact
-                    path="/purchase/outstate/inv"
-                    component={outstatebill}
-                  ></AuthReqRoute>
+                  <AuthReqRoute exact path="/supplier" component={SupplierPage}></AuthReqRoute>
+                  <AuthReqRoute path="/supplier/create" component={SupplierCreate}></AuthReqRoute>
+                  
+                  <AuthReqRoute exact path="/purchase" component={PurchasePage}></AuthReqRoute>
+                  <AuthReqRoute exact path="/purchase/bill" component={PurchaseBilling}></AuthReqRoute>
+                  <AuthReqRoute exact path="/purchase/outstate/inv" component={outstatebill}></AuthReqRoute>
+                  <AuthReqRoute exact path="/restaurant/inventory" component={Inventory}></AuthReqRoute>
+                  <AuthReqRoute exact path="/restaurant/order" component={OrderPage}></AuthReqRoute>
+                  <AuthReqRoute exact path="/restaurant/order/create" component={Create_order_page}></AuthReqRoute>
                 </div>
               </Fragment>
             </Switch>

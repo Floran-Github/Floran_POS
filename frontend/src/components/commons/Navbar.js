@@ -83,11 +83,17 @@ export class Navbar extends Component {
                 <span className="link-text">Dashboard</span>
               </Link>
             </li>
-            <li>
+            <li className="mainNav-item">
+              <Link to="/floorinventory" className="nav-link">
+                <i className="fa-secondary far fa-chart-bar"></i>
+                <span className="link-text">Floor Inventory Dashboard</span>
+              </Link>
+            </li>
+            {/* <li>
               <span className="nav-header">
                 <u>RetailManagement</u>
               </span>
-            </li>
+            </li> */}
             <li className="mainNav-item">
               <a href="/product" className="nav-link">
                 <i className="fa-primary fab fa-product-hunt"></i>

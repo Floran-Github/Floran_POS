@@ -2,7 +2,7 @@ import React from "react";
 import CurrentPurchase from "./CurrentPurchase";
 import LineChart from "./LineChart";
 import PieChart from "./PieChart";
-import PreviousPurchase from "./PreviousPurchase";
+import PreviousPurchase from "./TextBox";
 import ProductPurchased from "./ProductPurchased";
 
 const Dashboard = () => {
@@ -11,7 +11,11 @@ const Dashboard = () => {
       <div className="h-25 ml-3">
         <div className="row">
           <div className="col-md-6 col-sm-12">
-            <PreviousPurchase />
+            <PreviousPurchase
+              text={"Prevoius Month Total Purchase"}
+              number={"10"}
+              color={"primary"}
+            />
           </div>
           <div className="col-md-6 col-sm-12">
             <CurrentPurchase />

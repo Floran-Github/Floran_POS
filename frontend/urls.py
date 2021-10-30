@@ -7,6 +7,7 @@ urlpatterns = [
     path('createHotel', index),
     
     path('dashboard', index),
+    path('floorinventory', index),
 
     path('product', index),
     path('product/create', index),

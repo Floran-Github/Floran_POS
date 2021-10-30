@@ -27,6 +27,8 @@ import PurchaseBilling from "./Pages/purchase_billing/PurchaseBilling";
 import PurchasePage from "./Pages/purchase_billing/PurchasePage";
 import outstatebill from "./Pages/purchase_billing/outstatebill";
 import Dashboard from "./Pages/dashboard/Dashboard";
+import FloorDashboard from "./Pages/floor inventory dashboard/FloorDashboard";
+
 class App extends Component {
   async componentDidMount() {
     await store.dispatch(loadUser());
@@ -50,6 +52,11 @@ class App extends Component {
                     exact
                     path="/dashboard"
                     component={Dashboard}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/floorinventory"
+                    component={FloorDashboard}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact

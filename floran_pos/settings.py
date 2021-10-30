@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-894%6+&7#m@o9(ov82u7nzm_sg5oikggtb8q*zz13=ev=lxhxd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'product_api.apps.ProductApiConfig',
     'supplier_api.apps.SupplierApiConfig',
     'purchases_api.apps.PurchasesApiConfig',
+    'dashboard.apps.DashboardConfig',
+    'restaurant_inventory_api.apps.RestaurantInventoryApiConfig',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)

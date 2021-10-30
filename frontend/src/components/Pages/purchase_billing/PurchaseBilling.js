@@ -46,13 +46,10 @@ export class PurchaseBilling extends Component {
         return true
     }
     createBill = () => {
-        console.log('create bill called')
-        console.log(this.state.children)
         var {rowData,bill_type,supplier_name,supplier_id,invNumber,invDate,grandtotal} = this.state
         var check = this.validate();
         if(check){
             const Bill = {rowData,bill_type,supplier_name,supplier_id,invNumber,invDate,grandtotal};
-            console.log(Bill);
             this.props.createPurchase(Bill);
 
             this.setState({
@@ -209,7 +206,6 @@ export class PurchaseBilling extends Component {
     calc = (id) => {
         var stateRowData =this.state.rowData
         var data = stateRowData[id]
-        console.log('data',data)
         if(this.state.bill_type == 'instate'){
             var price = parseFloat(data[1]) * parseFloat(data[2]) 
             var sgst_total = (price * parseFloat(data[3])) / 100
@@ -237,7 +233,6 @@ export class PurchaseBilling extends Component {
                 grant += i[i.length - 1]
             }
         }
-        console.log('grand', grant)
         this.setState({
             grandtotal:grant
         })
@@ -264,7 +259,6 @@ export class PurchaseBilling extends Component {
                 break;
             }
         }
-        console.log(cusName)
         if(customer_gst[0] == user_gst[0] && customer_gst[1] == user_gst[1]){
             custype = 'instate'
 
@@ -358,9 +352,7 @@ export class PurchaseBilling extends Component {
         if(this.state.submitted == true){
             this.props.history.push('/purchase');
         }
-        if(this.state.rowData.length > 0){
-            console.log(this.state.rowData)
-        }
+        
         const bill_type = this.state.bill_type
         return (
             <div className='col-12'>

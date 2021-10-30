@@ -1,13 +1,15 @@
-import React from "react";
 import CurrentPurchase from "./CurrentPurchase";
 import LineChart from "./LineChart";
 import PieChart from "./PieChart";
 import PreviousPurchase from "./TextBox";
 import ProductPurchased from "./ProductPurchased";
 
-const Dashboard = () => {
-  return (
-    <div className="mx-auto">
+import React, { Component } from 'react'
+
+export class Dashboard extends Component {
+  render() {
+    return (
+      <div className="mx-auto">
       <div className="h-25 ml-3">
         <div className="row">
           <div className="col-md-6 col-sm-12">
@@ -36,7 +38,11 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
-  );
-};
+    )
+  }
+}
 
-export default Dashboard;
+export default Dashboard
+
+
+

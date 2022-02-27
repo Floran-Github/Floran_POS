@@ -25,7 +25,7 @@ export class Inventory extends Component {
                     <div className="row">
                         <div className="col-md-10">
                             <h2>
-                                Items available in Inventory
+                                Items available in Floor Inventory
                             </h2>
                         </div>
                         <div className="col-md-2">

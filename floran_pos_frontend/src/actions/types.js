@@ -32,4 +32,8 @@ export const GET_ORDER = 'GET_ORDER';
 export const GET_RETAIL_DASHBOARD = 'GET_RETAIL_DASHBOARD';
 export const GET_FLOOR_DASHBOARD = 'GET_FLOOR_DASHBOARD';
 
+<<<<<<< HEAD
 export const BASE_URL = 'http://192.168.56.1:8000/';
+=======
+export const BASE_URL = 'http://192.168.0.191:8000/'
+>>>>>>> 6c7068df3763ee839ddf4d8ac53565e14b260dfc

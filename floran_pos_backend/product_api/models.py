@@ -23,6 +23,7 @@ class product(models.Model):
     product_weight_category = models.CharField(max_length=10,choices=PRODUCT_WEIGHT_CATEGORY,default='kilogram')
     product_weight_per_quantity = models.IntegerField(default=0)
     product_price = models.FloatField()
+    totalquanitity = models.IntegerField(default=0)
 
 
     def __str__(self) -> str:

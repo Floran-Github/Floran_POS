@@ -4,3 +4,4 @@ from .models  import *
 admin.site.register(FloorInventory)
 admin.site.register(InventoryOrder)
 admin.site.register(InventoryOrderItems)
+admin.site.register(InventoryOrderNewItems)

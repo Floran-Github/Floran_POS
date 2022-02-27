@@ -43,7 +43,7 @@ export class OrderPage extends Component {
                                         <div className="card" >
                                             <div className="card-header">
                                                 <h4>
-                                                    Order No: {itm.order_name}
+                                                    Order No: {i+1}
                                                 </h4>
                                             </div>
                                             <div className="card-body">

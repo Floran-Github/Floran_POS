@@ -38,5 +38,5 @@ class InventoryOrderNewItems(models.Model):
     product_description = models.TextField()
     product_quantity = models.IntegerField()
     def __str__(self):
-        return f'{self.product} item for {self.order.order_name}'
+        return f'{self.product_name} item for {self.order.order_name}'
     

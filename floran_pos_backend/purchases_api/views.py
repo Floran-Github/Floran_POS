@@ -7,7 +7,7 @@ from product_api.models import product
 
 
 class singleInstatePurchaseDataApi(APIView):
-    permission_classess = [permissions.IsAuthenticated]
+    permission_classes  = [permissions.IsAuthenticated]
 
     def get(self,request,pk=None):
         print(request.user)
@@ -36,7 +36,7 @@ class singleInstatePurchaseDataApi(APIView):
         print(context)
         return Response(context,status=status.HTTP_200_OK)
 class singleOutstatePurchaseDataApi(APIView):
-    permission_classess = [permissions.IsAuthenticated]
+    permission_classes  = [permissions.IsAuthenticated]
 
     def get(self,request,pk=None):
         

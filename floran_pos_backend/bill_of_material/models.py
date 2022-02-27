@@ -1,11 +1,14 @@
 from django.db import models
 from restaurant_inventory_api.models import FloorInventory
+from django.contrib.auth.models import User
 class Bill_of_material(models.Model):
     name = models.CharField(max_length=100)
+    userLinked = models.ForeignKey(User,on_delete=models.CASCADE)
     production_cost = models.FloatField()
     price = models.FloatField()
     description = models.TextField()   
     receipe = models.TextField()
+    photo = models.ImageField(upload_to='billOfMaterial')
 
     def __str__(self):
         return self.name

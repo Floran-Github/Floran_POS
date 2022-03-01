@@ -110,7 +110,12 @@ body::-webkit-scrollbar-thumb {
   margin-left: 1rem;
   transition: var(--transition-speed);
 }
-  
+
+.customcard-link{
+  color: #1f1f1f;
+  /* transition: 300ms; */
+}
+
 .nav-header {
   display: none;
   margin-left: 0.5rem;
@@ -120,6 +125,10 @@ body::-webkit-scrollbar-thumb {
   transition: var(--transition-speed);
   transition-delay: 1s;
 
+}
+
+.receipe-p{
+  white-space: pre-line;
 }
 
 .nav-link svg {

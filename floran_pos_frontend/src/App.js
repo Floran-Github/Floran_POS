@@ -1,32 +1,34 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './store';
+import React, { Component, Fragment } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
-import { loadProfile, loadUser } from './actions/auth';
+import { loadProfile, loadUser } from "./actions/auth";
 
-import Navbar from './components/commons/Navbar';
-import Mainpage from './components/Pages/Mainpage';
-import ProductCreate from './components/Pages/product/ProductCreate';
-import ProductDetail from './components/Pages/product/ProductDetail';
-import Productpage from './components/Pages/product/Productpage';
-import CreateHotelDetail from './components/users/CreateHotelDetail';
-import Login from './components/users/Login';
-import Register from './components/users/Register';
-import AuthReqRoute from './components/commons/AuthReqRoute';
-import SupplierPage from './components/Pages/supplier/SupplierPage';
-import SupplierCreate from './components/Pages/supplier/SupplierCreate';
-import PurchaseBilling from './components/Pages/purchase_billing/PurchaseBilling';
-import PurchasePage from './components/Pages/purchase_billing/PurchasePage';
-import outstatebill from './components/Pages/purchase_billing/outstatebill';
-import Inventory from './components/Pages/restaurant_inventory/Inventory';
-import Create_order_page from './components/Pages/restaurant_inventory/Create_order_page';
-import OrderPage from './components/Pages/restaurant_inventory/OrderPage';
-import Dashboard from './components/Pages/dashboard/Dashboard';
-import FloorDashboard from './components/Pages/floor inventory dashboard/FloorDashboard';
-import instatebill from './components/Pages/purchase_billing/instatebill';
-import RoomDashboard from './components/Pages/hotel room booking/RoomDashboard';
-import RoomEdit from './components/Pages/hotel room booking/RoomEdit';
+import Navbar from "./components/commons/Navbar";
+import Mainpage from "./components/Pages/Mainpage";
+import ProductCreate from "./components/Pages/product/ProductCreate";
+import ProductDetail from "./components/Pages/product/ProductDetail";
+import Productpage from "./components/Pages/product/Productpage";
+import CreateHotelDetail from "./components/users/CreateHotelDetail";
+import Login from "./components/users/Login";
+import Register from "./components/users/Register";
+import AuthReqRoute from "./components/commons/AuthReqRoute";
+import SupplierPage from "./components/Pages/supplier/SupplierPage";
+import SupplierCreate from "./components/Pages/supplier/SupplierCreate";
+import PurchaseBilling from "./components/Pages/purchase_billing/PurchaseBilling";
+import PurchasePage from "./components/Pages/purchase_billing/PurchasePage";
+import outstatebill from "./components/Pages/purchase_billing/outstatebill";
+import Inventory from "./components/Pages/restaurant_inventory/Inventory";
+import Create_order_page from "./components/Pages/restaurant_inventory/Create_order_page";
+import OrderPage from "./components/Pages/restaurant_inventory/OrderPage";
+import Dashboard from "./components/Pages/dashboard/Dashboard";
+import FloorDashboard from "./components/Pages/floor inventory dashboard/FloorDashboard";
+import instatebill from "./components/Pages/purchase_billing/instatebill";
+import RoomDashboard from "./components/Pages/hotel room booking/RoomDashboard";
+import RoomEdit from "./components/Pages/hotel room booking/RoomEdit";
+import bomListPage from "./components/Pages/bill_of_material/bomListPage";
+import bomDetailPage from "./components/Pages/bill_of_material/bomDetailPage";
 
 export class App extends Component {
   async componentDidMount() {
@@ -40,92 +42,102 @@ export class App extends Component {
         <Router>
           <Fragment>
             <Switch>
-              <Route exact path='/' component={Mainpage}></Route>
-              <Route path='/login' component={Login}></Route>
-              <Route path='/register' component={Register}></Route>
-              <Route path='/createHotel' component={CreateHotelDetail}></Route>
+              <Route exact path="/" component={Mainpage}></Route>
+              <Route path="/login" component={Login}></Route>
+              <Route path="/register" component={Register}></Route>
+              <Route path="/createHotel" component={CreateHotelDetail}></Route>
               <Fragment>
                 <Navbar />
-                <div className=' mainContainer'>
+                <div className=" mainContainer">
                   <AuthReqRoute
                     exact
-                    path='/dashboard'
+                    path="/dashboard"
                     component={Dashboard}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/floorinventory'
+                    path="/floorinventory"
                     component={FloorDashboard}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/product'
+                    path="/product"
                     component={Productpage}
                   ></AuthReqRoute>
                   <AuthReqRoute
-                    path='/product/create'
+                    path="/product/create"
                     component={ProductCreate}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/product/detail'
+                    path="/product/detail"
                     component={ProductDetail}
                   ></AuthReqRoute>
 
                   <AuthReqRoute
                     exact
-                    path='/supplier'
+                    path="/supplier"
                     component={SupplierPage}
                   ></AuthReqRoute>
                   <AuthReqRoute
-                    path='/supplier/create'
+                    path="/supplier/create"
                     component={SupplierCreate}
                   ></AuthReqRoute>
 
                   <AuthReqRoute
                     exact
-                    path='/purchase'
+                    path="/purchase"
                     component={PurchasePage}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/purchase/bill'
+                    path="/purchase/bill"
                     component={PurchaseBilling}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/purchase/outstate/:id'
+                    path="/purchase/outstate/:id"
                     component={outstatebill}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/purchase/instate/:id'
+                    path="/purchase/instate/:id"
                     component={instatebill}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/restaurant/inventory'
+                    path="/restaurant/inventory"
                     component={Inventory}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/restaurant/order'
+                    path="/restaurant/order"
                     component={OrderPage}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/restaurant/order/create'
+                    path="/restaurant/order/create"
                     component={Create_order_page}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/rooms/dashboard'
+                    path="/rooms/dashboard"
                     component={RoomDashboard}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path='/rooms/edit'
+                    path="/rooms/edit"
                     component={RoomEdit}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/billOfMaterial"
+                    component={bomListPage}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/billOfMaterial/:id"
+                    component={bomDetailPage}
                   ></AuthReqRoute>
                 </div>
               </Fragment>

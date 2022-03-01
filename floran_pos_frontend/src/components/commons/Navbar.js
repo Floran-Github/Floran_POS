@@ -55,6 +55,17 @@ export class Navbar extends Component {
                 </svg>
               </div>
             </li>
+            <li>
+              <span className='nav-header'>
+                <u>Room Management</u>
+              </span>
+            </li>
+            <li className='mainNav-item'>
+              <Link to='/rooms/dashboard' className='nav-link'>
+              <i class="fas fa-building"></i>
+                <span className='link-text'>Rooms Dashboard</span>
+              </Link>
+            </li>
 
             <li>
               <span className='nav-header'>
@@ -77,6 +88,17 @@ export class Navbar extends Component {
               <Link to='/restaurant/order' className='nav-link'>
                 <i className='fas fa-pallet'></i>
                 <span className='link-text'>Place Order</span>
+              </Link>
+            </li>
+            <li>
+              <span className='nav-header'>
+                <u>Bill Of Material</u>
+              </span>
+            </li>
+            <li className='mainNav-item'>
+              <Link to='/billOfMaterial' className='nav-link'>
+              <i class="fas fa-utensils"></i>
+                <span className='link-text'>Bill Of Material List</span>
               </Link>
             </li>
             <li>
@@ -108,17 +130,7 @@ export class Navbar extends Component {
                 <span className='link-text'>Purchase</span>
               </Link>
             </li>
-            <li>
-              <span className='nav-header'>
-                <u>Hotel Management</u>
-              </span>
-            </li>
-            <li className='mainNav-item'>
-              <Link to='/rooms/dashboard' className='nav-link'>
-                <i className='far fa-user'></i>
-                <span className='link-text'>Rooms Dashboard</span>
-              </Link>
-            </li>
+            
             <li className='mainNav-item'>
               <Link to='/' className='nav-link'>
                 <i className='far fa-user'></i>

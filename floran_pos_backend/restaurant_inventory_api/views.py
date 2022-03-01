@@ -93,9 +93,4 @@ class orderAPI(views.APIView):
                 itm.save()
         
             
-
-
-
-
-        
         return Response({"message":"all good"},status=status.HTTP_200_OK)

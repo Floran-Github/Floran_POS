@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "startLinux":"react-scripts --openssl-legacy-provider start",
+    "startLinux": "react-scripts --openssl-legacy-provider start",
     "server": "react-scripts start --host 0.0.0.0",
     "build": "react-scripts build",
     "test": "react-scripts test",

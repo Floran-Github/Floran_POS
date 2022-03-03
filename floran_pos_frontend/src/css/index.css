@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Raleway:wght@100;200&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Raleway:wght@100;200&display=swap");
+* {
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
 }
 
 body {
   height: 100%;
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
   scroll-behavior: smooth;
 }
 :root {
@@ -46,7 +45,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 1000;
 }
 
-.cursor:hover{
+.cursor:hover {
   cursor: pointer;
 }
 .mainNav-nav {
@@ -77,8 +76,8 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
-.mainNav-item i{
-    font-size: 1.2rem;
+.mainNav-item i {
+  font-size: 1.2rem;
 }
 
 .mainNav-item:last-child {
@@ -111,7 +110,7 @@ body::-webkit-scrollbar-thumb {
   transition: var(--transition-speed);
 }
 
-.customcard-link{
+.customcard-link {
   color: #1f1f1f;
   /* transition: 300ms; */
 }
@@ -124,10 +123,9 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   transition: var(--transition-speed);
   transition-delay: 1s;
-
 }
 
-.receipe-p{
+.receipe-p {
   white-space: pre-line;
 }
 
@@ -168,17 +166,14 @@ body::-webkit-scrollbar-thumb {
   transition: var(--transition-speed);
 }
 
-
-
-.mainNav-nav .logo .logo-text
-{
+.mainNav-nav .logo .logo-text {
   display: inline;
   position: absolute;
   left: -999px;
   transition: var(--transition-speed);
 }
 
-.splash{
+.splash {
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -187,7 +182,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: auto;
 }
 
-.splash svg{
+.splash svg {
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -201,9 +196,7 @@ body::-webkit-scrollbar-thumb {
 
 .mainNav:hover {
   width: 16rem;
-  
 }
-
 
 .mainNav:hover .link-text {
   display: inline;
@@ -214,14 +207,18 @@ body::-webkit-scrollbar-thumb {
   transition-delay: 1s;
 }
 
-.mainNav:hover .logo svg
-{
+.mainNav:hover .logo svg {
   margin-left: 11rem;
 }
 
-.mainNav:hover .logo-text
-{
+.mainNav:hover .logo-text {
   left: 0px;
+}
+
+.noitemselected {
+  border: #1f1f1f dotted 1px;
+  padding: 30px 10px;
+  margin: 0px 10px 10px;
 }
 section {
   padding: 100px;
@@ -333,11 +330,11 @@ section .content .button:hover {
   transition: 0.5s;
 }
 
-.product_card{
+.product_card {
   margin-top: 30px;
 }
 
-.scrollableDiv{
+.scrollableDiv {
   flex: 1; /* So it fills the available vertical space */
   padding: 0;
   overflow: hidden;
@@ -359,38 +356,38 @@ section .content .button:hover {
 .scrollableDiv::-webkit-scrollbar-thumb {
   background: #972853;
 }
-.link{
+.link {
   color: #1f1f1f;
   margin-right: 10px;
   transition: 300ms;
 }
-.link:hover{
+.link:hover {
   color: #20457e;
 }
 
-.order_section{
+.order_section {
   width: 100%;
 }
-.order{
+.order {
   position: fixed;
   /* width:inherit */
   /* width: 100%; */
 }
-.supplier_table{
+.supplier_table {
   display: none;
 }
 
-.purchase_entiry_card{
+.purchase_entiry_card {
   min-height: 95vh !important;
   width: inherit;
   /* position: fixed; */
   /* width: 100%; */
   /* border: 1px solid #000; */
 }
-.css-nnbavb{
+.css-nnbavb {
   display: none !important;
 }
-.totalCardArea{
+.totalCardArea {
   position: absolute;
   bottom: 0;
   left: 10px;
@@ -399,20 +396,20 @@ section .content .button:hover {
   padding-top: 10px;
 }
 
-.customTh{
+.customTh {
   padding: 0px !important;
 }
-.customTh2{
+.customTh2 {
   width: 30%;
   /* padding: 0px !important; */
 }
 
-.customTable{
+.customTable {
   margin: 0px !important;
   padding: 0px !important;
 }
 
-.customTable2{
+.customTable2 {
   border-top: 0px solid #fff !important;
   border-bottom: 0px solid #fff !important;
   border-left: 0px solid #fff !important;
@@ -420,8 +417,8 @@ section .content .button:hover {
   margin: 0px !important;
   padding: 0px !important;
 }
-@media(max-width: 1024px) {
-  section .bg{
+@media (max-width: 1024px) {
+  section .bg {
     position: absolute;
     top: auto;
     right: auto;
@@ -433,11 +430,9 @@ section .content .button:hover {
   section .content h2 {
     font-size: 3.5em;
   }
-  section .content h4{
+  section .content h4 {
     font-size: 1.7em;
   }
-
-  
 }
 
 @media (max-width: 850px) {
@@ -451,11 +446,11 @@ section .content .button:hover {
     opacity: 0.5;
   }
 
-  .purchase_entiry_card{
+  .purchase_entiry_card {
     min-height: auto !important;
   }
 
-  .totalCardArea{
+  .totalCardArea {
     position: relative;
   }
 }
@@ -501,19 +496,18 @@ section .content .button:hover {
   .bginfo {
     height: 39vh;
   }
-  .createHomeDetail{
-      margin: 0;
+  .createHomeDetail {
+    margin: 0;
   }
 }
 
 @media only screen and (max-width: 600px) {
-   
   .mainNav {
     top: 0;
     width: 0rem;
     height: 100vh;
   }
-  .mainContainer{
+  .mainContainer {
     margin-left: 1rem;
   }
 }

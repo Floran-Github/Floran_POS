@@ -29,6 +29,7 @@ import RoomDashboard from "./components/Pages/hotel room booking/RoomDashboard";
 import RoomEdit from "./components/Pages/hotel room booking/RoomEdit";
 import bomListPage from "./components/Pages/bill_of_material/bomListPage";
 import bomDetailPage from "./components/Pages/bill_of_material/bomDetailPage";
+import bomCreatePage from "./components/Pages/bill_of_material/bomCreatePage";
 
 export class App extends Component {
   async componentDidMount() {
@@ -136,7 +137,12 @@ export class App extends Component {
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact
-                    path="/billOfMaterial/:id"
+                    path="/billOfMaterial/create"
+                    component={bomCreatePage}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/billOfMaterial/detail/:id"
                     component={bomDetailPage}
                   ></AuthReqRoute>
                 </div>

@@ -13,15 +13,15 @@ export class bomDetailPage extends Component {
         <div className="row">
           <div className="col-12">
             <div className="card">
-              <div class="row g-0">
-                <div class="col-md-4">
+              <div className="row g-0">
+                <div className="col-md-4">
                   <img
                     src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                    class="img-fluid rounded-start"
+                    className="img-fluid rounded-start"
                     alt="..."
                   />
                 </div>
-                <div class="col-md-8">
+                <div className="col-md-8">
                   <div className="card-header">
                     <div className="card-tools">
                       <Link className="link" to="/billOfMaterial">
@@ -33,29 +33,29 @@ export class bomDetailPage extends Component {
                       </Link>
                     </div>
                   </div>
-                  <div class="card-body">
+                  <div className="card-body">
                     <div className="row">
-                      <div class="form-group border-bottom row">
-                        <h5 class="col">
+                      <div className="form-group border-bottom row">
+                        <h5 className="col">
                           <label>Item Code</label>
                         </h5>
-                        <h5 class="col">
+                        <h5 className="col">
                           <b>1</b>
                         </h5>
                       </div>
 
-                      <div class="form-group border-bottom row">
-                        <h5 class="col">
+                      <div className="form-group border-bottom row">
+                        <h5 className="col">
                           <label>Item Name</label>
                         </h5>
-                        <h5 class="col">Burger</h5>
+                        <h5 className="col">Burger</h5>
                       </div>
 
-                      <div class="form-group border-bottom row">
-                        <h5 class="col">
+                      <div className="form-group border-bottom row">
+                        <h5 className="col">
                           <label>Item Desription</label>
                         </h5>
-                        <p class="col">
+                        <p className="col">
                           Lorem ipsum, dolor sit amet consectetur adipisicing
                           elit. Animi officia mollitia modi corporis, distinctio
                           dolorem quisquam consequuntur vel vitae aliquam
@@ -64,25 +64,25 @@ export class bomDetailPage extends Component {
                         </p>
                       </div>
 
-                      <div class="form-group border-bottom row">
-                        <h5 class="col">
+                      <div className="form-group border-bottom row">
+                        <h5 className="col">
                           <label>Item Production Cost</label>
                         </h5>
-                        <h5 class="col">25</h5>
+                        <h5 className="col">25</h5>
                       </div>
 
-                      <div class="form-group border-bottom row">
-                        <h5 class="col">
+                      <div className="form-group border-bottom row">
+                        <h5 className="col">
                           <label>Item Selling Cost</label>
                         </h5>
-                        <h5 class="col">35</h5>
+                        <h5 className="col">35</h5>
                       </div>
 
-                      <div class="form-group border-bottom row">
-                        <h5 class="col">
+                      <div className="form-group border-bottom row">
+                        <h5 className="col">
                           <label>Item Receipe</label>
                         </h5>
-                        <p class="col receipe-p">
+                        <p className="col receipe-p">
                           Read through the recipe at least twice to make sure
                           that you understand the directions.
                           <br />

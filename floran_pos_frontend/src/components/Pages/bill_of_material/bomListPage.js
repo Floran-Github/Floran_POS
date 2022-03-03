@@ -9,7 +9,7 @@ export default class bomListPage extends Component {
           <div className="col-12">
             <h1 className="float-start">Bill Of Material</h1>
             <div className="float-end">
-              <a href="/supplier/create" className="btn btn-primary">
+              <a href="/billOfMaterial/create" className="btn btn-primary">
                 <i className="fas fa-plus"></i>Add New Item
               </a>
             </div>
@@ -17,7 +17,7 @@ export default class bomListPage extends Component {
         </div>
         <div className="row">
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
@@ -40,7 +40,7 @@ export default class bomListPage extends Component {
             </div>
           </Link>
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
@@ -63,7 +63,7 @@ export default class bomListPage extends Component {
             </div>
           </Link>
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
@@ -86,7 +86,7 @@ export default class bomListPage extends Component {
             </div>
           </Link>
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
@@ -109,7 +109,7 @@ export default class bomListPage extends Component {
             </div>
           </Link>
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
@@ -132,7 +132,7 @@ export default class bomListPage extends Component {
             </div>
           </Link>
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
@@ -155,7 +155,7 @@ export default class bomListPage extends Component {
             </div>
           </Link>
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
@@ -178,7 +178,7 @@ export default class bomListPage extends Component {
             </div>
           </Link>
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
@@ -201,7 +201,7 @@ export default class bomListPage extends Component {
             </div>
           </Link>
           <Link
-            to="/billOfMaterial/2"
+            to="/billOfMaterial/detail/2"
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">

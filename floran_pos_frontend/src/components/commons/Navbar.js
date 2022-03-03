@@ -62,7 +62,7 @@ export class Navbar extends Component {
             </li>
             <li className='mainNav-item'>
               <Link to='/rooms/dashboard' className='nav-link'>
-              <i class="fas fa-building"></i>
+              <i className="fas fa-building"></i>
                 <span className='link-text'>Rooms Dashboard</span>
               </Link>
             </li>
@@ -97,7 +97,7 @@ export class Navbar extends Component {
             </li>
             <li className='mainNav-item'>
               <Link to='/billOfMaterial' className='nav-link'>
-              <i class="fas fa-utensils"></i>
+              <i className="fas fa-utensils"></i>
                 <span className='link-text'>Bill Of Material List</span>
               </Link>
             </li>

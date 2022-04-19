@@ -31,5 +31,8 @@ export const GET_ORDER = "GET_ORDER";
 
 export const GET_RETAIL_DASHBOARD = "GET_RETAIL_DASHBOARD";
 export const GET_FLOOR_DASHBOARD = "GET_FLOOR_DASHBOARD";
+export const GET_BILL_OF_MATERIAL = "GET_BILL_OF_MATERIAL";
+export const DETAIL_BILL_OF_MATERIAL = "DETAIL_BILL_OF_MATERIAL";
 
-export const BASE_URL = "http://192.168.0.191:8000/";
+// export const BASE_URL = "http://192.168.43.187:8000/";
+export const BASE_URL = "http://192.168.0.202:8000/";

@@ -23,8 +23,15 @@ class GETfloorInventoryAPI(views.APIView):
         data = FloorInventory.objects.filter(user_linked=self.request.user)
         prddata=[]
         for i in data:
-            prddata.append([i.product.pk,i.product.product_name,i.product.product_price])
-        return Response({"floorinventory":data.values(),"invPrdData":prddata},status=status.HTTP_200_OK)
+            itm = {
+                "id" : i.id,
+                "name" : i.product.product_name,
+                "prdId" : i.product.pk,
+                "price" : i.product.product_price,
+                "quantity" : i.qty
+            }
+            prddata.append(itm)
+        return Response({"floorinventory": prddata},status=status.HTTP_200_OK)
 
 class orderAPI(views.APIView):
     permission_classes = [

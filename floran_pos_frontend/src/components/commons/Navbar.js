@@ -96,6 +96,12 @@ export class Navbar extends Component {
               </span>
             </li>
             <li className='mainNav-item'>
+              <Link to='/billOfMaterial/dashboard' className='nav-link'>
+              <i className="far fa-chart-bar"></i>
+                <span className='link-text'>Bill Of Material Dashboard</span>
+              </Link>
+            </li>
+            <li className='mainNav-item'>
               <Link to='/billOfMaterial' className='nav-link'>
               <i className="fas fa-utensils"></i>
                 <span className='link-text'>Bill Of Material List</span>

@@ -1,7 +1,6 @@
 import { GET_FLOORINV } from "../actions/types";
 const initialState = {
-    floorinventory : [],
-    invPrdData : [],
+    floorinventory : []
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export

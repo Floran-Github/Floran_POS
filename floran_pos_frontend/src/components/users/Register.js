@@ -8,7 +8,7 @@ import "../../css/registerPage.css";
 
 export class Register extends Component {
   state = {
-    isregister: false,
+    buttonClicked: false,
     username: "",
     email: "",
     password: "",
@@ -33,69 +33,55 @@ export class Register extends Component {
   onSubmit = async (e) => {
     e.preventDefault();
     const {
-        username,
-        email,
-        password,
-        password2,
-        logo,
-        hotel_name,
-        hotel_address,
-        mobile_number,
-        gst_number,
-        bank_name,
-        account_number,
-        IFC_number,
-        branch_name,
-        company_pan,
-      } = this.state;
+      username,
+      email,
+      password,
+      password2,
+      logo,
+      hotel_name,
+      hotel_address,
+      mobile_number,
+      gst_number,
+      bank_name,
+      account_number,
+      IFC_number,
+      branch_name,
+      company_pan,
+    } = this.state;
     if (password !== password2) {
-        alert("Password not same")
-    } else if(parseInt(mobile_number) > 9999999999){
-        alert("Invalid Mobile Number")
+      alert("Password not same");
+    } else if (parseInt(mobile_number) > 9999999999) {
+      alert("Invalid Mobile Number");
     } else {
-      const newUser = {
-        username,
-        password,
-        password2,
-        email,
-        logo,
-        hotel_name,
-        hotel_address,
-        mobile_number,
-        gst_number,
-        bank_name,
-        account_number,
-        IFC_number,
-        branch_name,
-        company_pan
-      };
-      let formData = new FormData()
+      this.setState({ buttonClicked: true });
+      let formData = new FormData();
 
-      formData.append("username",username)
-      formData.append("password",password)
-      formData.append("password2",password2)
-      formData.append("email",email)
-      formData.append("logo",logo)
-      formData.append("hotel_name",hotel_name)
-      formData.append("hotel_address",hotel_address)
-      formData.append("mobile_number",mobile_number)
-      formData.append("gst_number",gst_number)
-      formData.append("bank_name",bank_name)
-      formData.append("account_number",account_number)
-      formData.append("IFC_number",IFC_number)
-      formData.append("branch_name",branch_name)
-      formData.append("company_pan",company_pan)
-      console.log(this.state)
+      formData.append("username", username);
+      formData.append("password", password);
+      formData.append("password2", password2);
+      formData.append("email", email);
+      formData.append("logo", logo);
+      formData.append("hotel_name", hotel_name);
+      formData.append("hotel_address", hotel_address);
+      formData.append("mobile_number", mobile_number);
+      formData.append("gst_number", gst_number);
+      formData.append("bank_name", bank_name);
+      formData.append("account_number", account_number);
+      formData.append("IFC_number", IFC_number);
+      formData.append("branch_name", branch_name);
+      formData.append("company_pan", company_pan);
+      console.log(this.state);
       await this.props.register(formData);
-    //   this.setState({ isregister: true });
+      //   this.setState({ isregister: true });
     }
   };
 
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
-  onImageChange =(e) =>this.setState({
-      logo:e.target.files[0]
-  })
+  onImageChange = (e) =>
+    this.setState({
+      logo: e.target.files[0],
+    });
   render() {
     const {
       username,
@@ -114,14 +100,8 @@ export class Register extends Component {
       company_pan,
     } = this.state;
 
-    if (this.state.isregister) {
-      return <Redirect to="/createHotel" />;
-    } else if (this.props.isAuthenticated) {
-      if (this.props.profileExists) {
-        return <Redirect to="/product" />;
-      } else {
-        return <Redirect to="/createHotel" />;
-      }
+    if (this.props.isAuthenticated) {
+      return <Redirect to="/product" />;
     }
     return (
       <div className="container">
@@ -195,7 +175,8 @@ export class Register extends Component {
                     <label>Hotel Mobile Number</label>
                     <input
                       type="number"
-                      min="100000000" max="9999999999"
+                      min="100000000"
+                      max="9999999999"
                       className="form-control"
                       name="mobile_number"
                       placeholder="Mobile Number"
@@ -302,9 +283,17 @@ export class Register extends Component {
                 </div>
                 <div className="row form-group text-center">
                   <div className="col-12">
-                    <button type="submit" className="btn btn-primary">
-                      Register
-                    </button>
+                    {this.props.isLoading ? (
+                      <div className="btn btn-primary">
+                        <div className="spinner-border" role="status">
+                          <span className="sr-only">Loading...</span>
+                        </div>
+                      </div>
+                    ) : (
+                      <button type="submit" className="btn btn-primary">
+                        Register
+                      </button>
+                    )}
                     <p>
                       Already have an account? <Link to="/login">Login</Link>
                     </p>
@@ -321,6 +310,7 @@ export class Register extends Component {
 
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
+  isLoading: state.auth.isLoading
 });
 
 export default connect(mapStateToProps, { register })(Register);

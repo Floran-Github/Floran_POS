@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Fade from "@mui/material/Fade";
-import Typography from "@mui/material/Typography";
 import Backdrop from "@mui/material/Backdrop";
 export class bomCreatePage extends Component {
   state = {

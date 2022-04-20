@@ -112,7 +112,16 @@ body::-webkit-scrollbar-thumb {
 
 .customcard-link {
   color: #1f1f1f;
-  /* transition: 300ms; */
+  transition: 1.5s;
+}
+
+.customcard-link .card{
+  transition: 0.3s;
+}
+.customcard-link .card:hover{
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 5px 10px;
 }
 
 .nav-header {

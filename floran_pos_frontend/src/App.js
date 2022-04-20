@@ -10,7 +10,6 @@ import Mainpage from "./components/Pages/Mainpage";
 import ProductCreate from "./components/Pages/product/ProductCreate";
 import ProductDetail from "./components/Pages/product/ProductDetail";
 import Productpage from "./components/Pages/product/Productpage";
-import CreateHotelDetail from "./components/users/CreateHotelDetail";
 import Login from "./components/users/Login";
 import Register from "./components/users/Register";
 import AuthReqRoute from "./components/commons/AuthReqRoute";
@@ -30,6 +29,7 @@ import RoomEdit from "./components/Pages/hotel room booking/RoomEdit";
 import bomListPage from "./components/Pages/bill_of_material/bomListPage";
 import bomDetailPage from "./components/Pages/bill_of_material/bomDetailPage";
 import bomCreatePage from "./components/Pages/bill_of_material/bomCreatePage";
+import bomDashboard from "./components/Pages/bill_of_material/bomDashboard";
 
 export class App extends Component {
   async componentDidMount() {
@@ -46,7 +46,6 @@ export class App extends Component {
               <Route exact path="/" component={Mainpage}></Route>
               <Route path="/login" component={Login}></Route>
               <Route path="/register" component={Register}></Route>
-              <Route path="/createHotel" component={CreateHotelDetail}></Route>
               <Fragment>
                 <Navbar />
                 <div className=" mainContainer">
@@ -134,6 +133,11 @@ export class App extends Component {
                     exact
                     path="/billOfMaterial"
                     component={bomListPage}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/billOfMaterial/dashboard"
+                    component={bomDashboard}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact

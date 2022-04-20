@@ -12,11 +12,8 @@ export class Inventory extends Component {
         var invPrdData;
         if (this.props.floorinventoryItem.length === 0 && this.props.floorinventoryItem[0] === 0) {
             InventoryItems = [];
-            invPrdData = [];
         } else {
             InventoryItems = this.props.floorinventoryItem;
-            invPrdData = this.props.invPrdData;
-
         }
 
         return (
@@ -49,9 +46,9 @@ export class Inventory extends Component {
                                     InventoryItems.map((items,index) => (
                                         <tr key={index}>
                                             <td>{index+1}</td>
-                                            <td>{invPrdData[index][1]}</td>
-                                            <td>{items.qty}</td>
-                                            <td>{invPrdData[index][2]}</td>
+                                            <td>{items.name}</td>
+                                            <td>{items.quantity}</td>
+                                            <td>{items.price}</td>
                                         </tr>
                                     ))
                                 }
@@ -66,7 +63,6 @@ export class Inventory extends Component {
 
 const mapStateToProps = state => ({
     floorinventoryItem: state.floorinventory.floorinventory,
-    invPrdData: state.floorinventory.invPrdData
 })
 
 export default connect(mapStateToProps,{getFloorInventoryItems})(Inventory)

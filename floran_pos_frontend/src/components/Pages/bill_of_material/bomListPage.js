@@ -1,8 +1,32 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+import { connect } from "react-redux";
+import { getBillOfMaterial } from "../../../actions/billofmaterial";
 
-export default class bomListPage extends Component {
+export class bomListPage extends Component {
+  constructor(props){
+    super(props);
+  }
+
+  static propTypes = {
+    billOfMaterial: PropTypes.array.isRequired
+  };
+
+  componentDidMount(){
+    if(this.props.billOfMaterial.length === 0){
+      this.props.getBillOfMaterial();
+    }
+  }
   render() {
+    let billOfMaterialList;
+
+    if(this.props.billOfMaterial.length === 0){
+      billOfMaterialList = []
+    } else{
+      billOfMaterialList = this.props.billOfMaterial
+    }
+    console.log(billOfMaterialList)
     return (
       <div className="col-12">
         <div className="row">
@@ -16,215 +40,44 @@ export default class bomListPage extends Component {
           </div>
         </div>
         <div className="row">
+          {
+            billOfMaterialList.map((data,index) => (
+
           <Link
-            to="/billOfMaterial/detail/2"
+          key={index}
+            to={`/billOfMaterial/detail/${data.id}`}
             className="col-lg-2 col-md-4 col-12 customcard-link"
           >
             <div className="card">
               <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
+                src={data.photo}
                 className="card-img-top"
                 alt="pop"
               />
               <div className="card-body">
                 <h2>
-                  <b>Burger</b>
+                  <b>{data.name}</b>
                 </h2>
                 <h5>
-                  <b>Production cost : </b>12300
+                  <b>Production cost : </b>{data.production_cost}
                 </h5>
                 <h5>
-                  <b>Selling cost : </b>12300
+                  <b>Selling cost : </b>{data.price}
                 </h5>
               </div>
             </div>
           </Link>
-          <Link
-            to="/billOfMaterial/detail/2"
-            className="col-lg-2 col-md-4 col-12 customcard-link"
-          >
-            <div className="card">
-              <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                className="card-img-top"
-                alt="pop"
-              />
-              <div className="card-body">
-                <h2>
-                  <b>Burger</b>
-                </h2>
-                <h5>
-                  <b>Production cost : </b>12300
-                </h5>
-                <h5>
-                  <b>Selling cost : </b>12300
-                </h5>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/billOfMaterial/detail/2"
-            className="col-lg-2 col-md-4 col-12 customcard-link"
-          >
-            <div className="card">
-              <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                className="card-img-top"
-                alt="pop"
-              />
-              <div className="card-body">
-                <h2>
-                  <b>Burger</b>
-                </h2>
-                <h5>
-                  <b>Production cost : </b>12300
-                </h5>
-                <h5>
-                  <b>Selling cost : </b>12300
-                </h5>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/billOfMaterial/detail/2"
-            className="col-lg-2 col-md-4 col-12 customcard-link"
-          >
-            <div className="card">
-              <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                className="card-img-top"
-                alt="pop"
-              />
-              <div className="card-body">
-                <h2>
-                  <b>Burger</b>
-                </h2>
-                <h5>
-                  <b>Production cost : </b>12300
-                </h5>
-                <h5>
-                  <b>Selling cost : </b>12300
-                </h5>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/billOfMaterial/detail/2"
-            className="col-lg-2 col-md-4 col-12 customcard-link"
-          >
-            <div className="card">
-              <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                className="card-img-top"
-                alt="pop"
-              />
-              <div className="card-body">
-                <h2>
-                  <b>Burger</b>
-                </h2>
-                <h5>
-                  <b>Production cost : </b>12300
-                </h5>
-                <h5>
-                  <b>Selling cost : </b>12300
-                </h5>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/billOfMaterial/detail/2"
-            className="col-lg-2 col-md-4 col-12 customcard-link"
-          >
-            <div className="card">
-              <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                className="card-img-top"
-                alt="pop"
-              />
-              <div className="card-body">
-                <h2>
-                  <b>Burger</b>
-                </h2>
-                <h5>
-                  <b>Production cost : </b>12300
-                </h5>
-                <h5>
-                  <b>Selling cost : </b>12300
-                </h5>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/billOfMaterial/detail/2"
-            className="col-lg-2 col-md-4 col-12 customcard-link"
-          >
-            <div className="card">
-              <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                className="card-img-top"
-                alt="pop"
-              />
-              <div className="card-body">
-                <h2>
-                  <b>Burger</b>
-                </h2>
-                <h5>
-                  <b>Production cost : </b>12300
-                </h5>
-                <h5>
-                  <b>Selling cost : </b>12300
-                </h5>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/billOfMaterial/detail/2"
-            className="col-lg-2 col-md-4 col-12 customcard-link"
-          >
-            <div className="card">
-              <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                className="card-img-top"
-                alt="pop"
-              />
-              <div className="card-body">
-                <h2>
-                  <b>Burger</b>
-                </h2>
-                <h5>
-                  <b>Production cost : </b>12300
-                </h5>
-                <h5>
-                  <b>Selling cost : </b>12300
-                </h5>
-              </div>
-            </div>
-          </Link>
-          <Link
-            to="/billOfMaterial/detail/2"
-            className="col-lg-2 col-md-4 col-12 customcard-link"
-          >
-            <div className="card">
-              <img
-                src="https://res.cloudinary.com/floran-music/raw/upload/v1/media/blog/Welcome_Scan_aygnxt.jpg"
-                className="card-img-top"
-                alt="pop"
-              />
-              <div className="card-body">
-                <h2>
-                  <b>Burger</b>
-                </h2>
-                <h5>
-                  <b>Production cost : </b>12300
-                </h5>
-                <h5>
-                  <b>Selling cost : </b>12300
-                </h5>
-              </div>
-            </div>
-          </Link>
+            ))
+          }
+          
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  billOfMaterial: state.billofmaterial.billOfMaterial
+})
+
+export default connect(mapStateToProps,{getBillOfMaterial})(bomListPage)

@@ -22,6 +22,9 @@ class Dashboard_API(APIView):
         else:
             startYear = dt.today().year
             startMonth = dt.today().month
+            startDay = dt.today().day
+            dayList = [i for i in range(
+                startDay, calendar.monthrange(dt.today().year, dt.today().month)[1]+1)]
         
         currentYear = dt.today().year
 
@@ -29,7 +32,7 @@ class Dashboard_API(APIView):
             dayList = [i for i in range(
             1, calendar.monthrange(dt.today().year, dt.today().month)[1]+1)]
             startDay = 1
-        else:
+        elif invtOrder:
             if startMonth ==  dt.today().month:
                 startDay = invtOrder.order_by('issued_on')[0].issued_on.day
             else:

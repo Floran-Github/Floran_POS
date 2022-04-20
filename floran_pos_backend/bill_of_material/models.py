@@ -9,6 +9,7 @@ class Bill_of_material(models.Model):
     description = models.TextField()   
     receipe = models.TextField()
     photo = models.ImageField(upload_to='billOfMaterial')
+    is_in_menu = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name

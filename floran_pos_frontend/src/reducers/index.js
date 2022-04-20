@@ -7,6 +7,7 @@ import floorinventory from "./floorinventory";
 import order from "./order";
 import retail_dashboard from "./retail_dashboard";
 import floorinventory_dashboard from "./floorinventory_dashboard";
+import billofmaterial from "./billofmaterial";
 export default combineReducers({
     auth,
     product,
@@ -15,5 +16,6 @@ export default combineReducers({
     floorinventory,
     order,
     retail_dashboard,
-    floorinventory_dashboard
+    floorinventory_dashboard,
+    billofmaterial
 });

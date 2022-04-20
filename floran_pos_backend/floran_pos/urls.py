@@ -30,7 +30,7 @@ urlpatterns = [
     path('api/floorinventory/', include('restaurant_inventory_api.urls')),
     path('api/billOfMaterial/', include('bill_of_material.urls')),
     path('api/restaurant/', include('food_order_and_menu_system.urls')),
-
+    path('api/rooms/',include('room_booking_api.urls'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'kitchen_inventory_api.apps.KitchenInventoryApiConfig',
     'staff_management.apps.StaffManagementConfig',
     'food_order_and_menu_system.apps.FoodOrderAndMenuSystemConfig',
+    'room_booking_api.apps.RoomBookingApiConfig'
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)

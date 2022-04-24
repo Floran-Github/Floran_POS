@@ -2,6 +2,8 @@ from django.db import models
 from bill_of_material.models import Bill_of_material
 from django.contrib.auth.models import User
 
+from room_booking_api.models import CustomerDetail
+
 class Combo(models.Model):
     userLinked = models.ForeignKey(User,on_delete=models.CASCADE,related_name="combo",null=True)
     comboName = models.CharField(max_length=15)
@@ -15,6 +17,7 @@ class Combo(models.Model):
 
 class Order(models.Model):
     userLinked = models.ForeignKey(User,on_delete=models.CASCADE)
+    customer = models.ForeignKey(CustomerDetail,on_delete=models.CASCADE)
     orderNumber = models.IntegerField()
     orderDate = models.DateField(auto_now=True)
     orderPrice = models.FloatField()

@@ -30,6 +30,8 @@ import bomListPage from "./components/Pages/bill_of_material/bomListPage";
 import bomDetailPage from "./components/Pages/bill_of_material/bomDetailPage";
 import bomCreatePage from "./components/Pages/bill_of_material/bomCreatePage";
 import bomDashboard from "./components/Pages/bill_of_material/bomDashboard";
+import FoodOrderingPage from "./components/Pages/food_order/FoodOrderingPage";
+import orderList from "./components/Pages/food_order/orderList";
 
 export class App extends Component {
   async componentDidMount() {
@@ -46,6 +48,7 @@ export class App extends Component {
               <Route exact path="/" component={Mainpage}></Route>
               <Route path="/login" component={Login}></Route>
               <Route path="/register" component={Register}></Route>
+              <AuthReqRoute exact path="/order" component={FoodOrderingPage} />
               <Fragment>
                 <Navbar />
                 <div className=" mainContainer">
@@ -148,6 +151,11 @@ export class App extends Component {
                     exact
                     path="/billOfMaterial/detail/:id"
                     component={bomDetailPage}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/orders/list"
+                    component={orderList}
                   ></AuthReqRoute>
                 </div>
               </Fragment>

@@ -92,6 +92,23 @@ export class Navbar extends Component {
             </li>
             <li>
               <span className='nav-header'>
+                <u>Order</u>
+              </span>
+            </li>
+            <li className='mainNav-item'>
+              <Link to='/order' className='nav-link'>
+              <i className="fas fa-utensils"></i>
+                <span className='link-text'>Order POS</span>
+              </Link>
+            </li>
+            <li className='mainNav-item'>
+              <Link to='/orders/list' className='nav-link'>
+              <i className="fas fa-hamburger"></i>
+                <span className='link-text'>Order List</span>
+              </Link>
+            </li>
+            <li>
+              <span className='nav-header'>
                 <u>Bill Of Material</u>
               </span>
             </li>

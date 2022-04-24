@@ -403,6 +403,7 @@ section .content .button:hover {
   border-top: 1px solid #e6e6e6;
   margin-top: 10px;
   padding-top: 10px;
+  width: 100%;
 }
 
 .customTh {
@@ -426,6 +427,38 @@ section .content .button:hover {
   margin: 0px !important;
   padding: 0px !important;
 }
+
+/* Food ordering */
+
+.nonVeg{
+  background-color: #f60f20;
+  color: #fff;
+  cursor: pointer;
+}
+
+.veg{
+  background-color: #42f557;
+  cursor: pointer;
+  color: #fff;
+}
+
+.drink{
+  cursor: pointer;
+  background-color: #42a4f5;
+  color: #fff;
+}
+
+.itemtitle{
+  min-height: 50px;
+}
+
+.qtySection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 @media (max-width: 1024px) {
   section .bg {
     position: absolute;

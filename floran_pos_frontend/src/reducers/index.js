@@ -10,6 +10,8 @@ import floorinventory_dashboard from "./floorinventory_dashboard";
 import billofmaterial from "./billofmaterial";
 import foodorder from "./foodorder";
 import customer from "./customer";
+import booking from "./booking";
+import room from "./room";
 export default combineReducers({
     auth,
     product,
@@ -21,5 +23,7 @@ export default combineReducers({
     floorinventory_dashboard,
     billofmaterial,
     foodorder,
-    customer
+    customer,
+    booking,
+    room
 });

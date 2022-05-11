@@ -1,10 +1,16 @@
 from rest_framework import serializers
 from .models import *
 
+class roomTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RoomType
+        fields = '__all__'
+
 class roomSerializer(serializers.ModelSerializer):
+    room_type = roomTypeSerializer()
     class Meta:
         model = Room
-        fields = '__all__'
+        fields = ('id','room_number','number_of_person','smoking','room_rate','user_linked','room_type')
 
 class roomAvailabilitySerializer(serializers.ModelSerializer):
     class Meta:

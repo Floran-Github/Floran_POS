@@ -241,7 +241,7 @@ export class Create_order_page extends Component {
             invPrdData = [];
         } else {
             InventoryItems = this.props.floorinventoryItem;
-            invPrdData = this.props.invPrdData;
+            invPrdData = this.props.floorinventoryItem;
 
         }
 
@@ -428,7 +428,6 @@ export class Create_order_page extends Component {
 const mapStateToProps = state => ({
     products: state.product.products,
     floorinventoryItem: state.floorinventory.floorinventory,
-    invPrdData: state.floorinventory.invPrdData
 })
 
 export default connect(mapStateToProps,{getFloorInventoryItems,getProducts,createOrder})(Create_order_page)

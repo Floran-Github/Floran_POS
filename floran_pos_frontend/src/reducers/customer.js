@@ -1,7 +1,9 @@
-import { GET_CUSTOMER } from "../actions/types";
+import { GET_CUSTOMER,CREATE_CUSTOMER } from "../actions/types";
 
 const initialState = {
-    customers : []
+    customers : [],
+    customerId: "",
+    customerCreated: false,
 }
 
 export default function(state=initialState,action){
@@ -10,6 +12,13 @@ export default function(state=initialState,action){
             return{
                 ...state,
                 customers: action.payload
+            }
+        case CREATE_CUSTOMER:
+            return{
+                ...state,
+                customers: [...state.customers,action.payload],
+                customerId: action.payload.id,
+                customerCreated: true
             }
         default:
             return state

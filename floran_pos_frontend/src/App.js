@@ -32,6 +32,11 @@ import bomCreatePage from "./components/Pages/bill_of_material/bomCreatePage";
 import bomDashboard from "./components/Pages/bill_of_material/bomDashboard";
 import FoodOrderingPage from "./components/Pages/food_order/FoodOrderingPage";
 import orderList from "./components/Pages/food_order/orderList";
+import RoomBooking from "./components/Pages/hotel room booking/RoomBooking";
+import Reservation from "./components/Pages/hotel room booking/Reservation";
+import CustomerPage from "./components/Pages/hotel room booking/CustomerPage";
+import ExistingCustomer from "./components/Pages/hotel room booking/ExistingCustomer";
+import BookingRoom from "./components/Pages/hotel room booking/BookingRoom";
 
 export class App extends Component {
   async componentDidMount() {
@@ -49,6 +54,11 @@ export class App extends Component {
               <Route path="/login" component={Login}></Route>
               <Route path="/register" component={Register}></Route>
               <AuthReqRoute exact path="/order" component={FoodOrderingPage} />
+              <AuthReqRoute exact path="/booking" component={RoomBooking} />
+              <AuthReqRoute exact path="/reservation" component={Reservation} />
+              <AuthReqRoute exact path="/reservation/new/customer" component={CustomerPage} />
+              <AuthReqRoute exact path="/reservation/existing/customer" component={ExistingCustomer} />
+              <AuthReqRoute exact path="/reservation/booking" component={BookingRoom} />
               <Fragment>
                 <Navbar />
                 <div className=" mainContainer">

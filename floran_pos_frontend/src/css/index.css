@@ -115,10 +115,10 @@ body::-webkit-scrollbar-thumb {
   transition: 1.5s;
 }
 
-.customcard-link .card{
+.customcard-link .card {
   transition: 0.3s;
 }
-.customcard-link .card:hover{
+.customcard-link .card:hover {
   background-color: #1f1f1f;
   color: #fff;
   padding: 5px 10px;
@@ -430,33 +430,175 @@ section .content .button:hover {
 
 /* Food ordering */
 
-.nonVeg{
+.nonVeg {
   background-color: #f60f20;
   color: #fff;
   cursor: pointer;
 }
 
-.veg{
+.veg {
   background-color: #42f557;
   cursor: pointer;
   color: #fff;
 }
 
-.drink{
+.drink {
   cursor: pointer;
   background-color: #42a4f5;
   color: #fff;
 }
 
-.itemtitle{
+.itemtitle {
   min-height: 50px;
 }
 
-.qtySection{
+.qtySection {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.bookingMenuRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.bookingTable {
+  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin: 15px 0px;
+  padding-bottom: 10px;
+}
+
+.bookingTable::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.bookingTable::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.bookingTable::-webkit-scrollbar-thumb {
+  background: #ff9d2b;
+}
+
+.bookingCorner,
+.roomNumber,
+.bookingHeader {
+  color: #fff;
+  display: inline-flex;
+  flex-direction: column;
+  width: 9rem;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.roomNumber {
+  /* display: inline-block;
+  text-align: center; */
+  margin: 1px 0px;
+  background-color: #20457e;
+  border: 1px solid #20457e;
+}
+.bookingCorner {
+  background-color: #42a4f5;
+  border: 1px solid #fff;
+}
+
+.bookingHeader {
+  background-color: #ff9d2b;
+  border: 1px solid #ddd;
+}
+
+.bigBookedroom,
+.bookedRoom {
+  background-color: #42f557;
+  border: 1px solid #42f557;
+  color: #fff;
+  /* display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; */
+  width: 9rem;
+  height: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* margin: 1px 1px; */
+  cursor: pointer;
+  transition: 300ms;
+  padding: 10px 15px;
+}
+
+.bigBookedroom {
+  width: 18rem;
+}
+
+.unbookedRoom {
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  color: #1f1f1f;
+  display: inline-block;
+  vertical-align: middle;
+  /* display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  width: 9rem;
+  height: 5rem;
+  /* margin: 1px 1px; */
+  cursor: pointer;
+  transition: 300ms;
+}
+.customIcon {
+  font-size: 5em;
+}
+.customerCard {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.alignCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.reservationHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.searchArea{
+  margin: 5px 10px;
+}
+
+.link{
+  color: #1f1f1f;
+  transition: 300ms;
+}
+.link:hover{
+  color: #434241;
+  transition: 300ms;
+}
+.pointer{
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -494,6 +636,10 @@ section .content .button:hover {
 
   .totalCardArea {
     position: relative;
+  }
+
+  .customerCard {
+    height: auto;
   }
 }
 
@@ -552,41 +698,4 @@ section .content .button:hover {
   .mainContainer {
     margin-left: 1rem;
   }
-}
-
-.dark {
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-}
-
-.light {
-  --text-primary: #1f1f1f;
-  --text-secondary: #000000;
-  --bg-primary: #ffffff;
-  --bg-secondary: #e4e4e4;
-}
-
-.solar {
-  --text-primary: #576e75;
-  --text-secondary: #35535c;
-  --bg-primary: #fdf6e3;
-  --bg-secondary: #f5e5b8;
-}
-
-.theme-icon {
-  display: none;
-}
-
-.dark #darkIcon {
-  display: block;
-}
-
-.light #lightIcon {
-  display: block;
-}
-
-.solar #solarIcon {
-  display: block;
 }

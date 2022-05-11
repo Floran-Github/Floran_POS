@@ -37,9 +37,14 @@ export const DETAIL_BILL_OF_MATERIAL = "DETAIL_BILL_OF_MATERIAL";
 
 export const GET_MENU = "GET_MENU";
 export const CREATE_ORDER = "CREATE_ORDER";
-export const GET_CUSTOMER = "GET_CUSTOMER";
 
+export const GET_CUSTOMER = "GET_CUSTOMER";
+export const CREATE_CUSTOMER = "CREATE_CUSTOMER";
+
+export const GET_BOOKING = "GET_BOOKING";
+
+export const GET_ROOM = "GET_ROOM";
 
 // export const BASE_URL = "http://192.168.0.6:8000/";
-export const BASE_URL = "http://192.168.43.187:8000/";
-// export const BASE_URL = "http://192.168.0.202:8000/";
+// export const BASE_URL = "http://192.168.43.187:8000/";
+export const BASE_URL = "http://192.168.0.202:8000/";

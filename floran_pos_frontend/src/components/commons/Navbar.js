@@ -61,6 +61,12 @@ export class Navbar extends Component {
               </span>
             </li>
             <li className='mainNav-item'>
+              <Link to='/reservation' className='nav-link'>
+              <i className="fa-solid fa-bed"></i>
+                <span className='link-text'>Rooms POS</span>
+              </Link>
+            </li>
+            <li className='mainNav-item'>
               <Link to='/rooms/dashboard' className='nav-link'>
               <i className="fas fa-building"></i>
                 <span className='link-text'>Rooms Dashboard</span>

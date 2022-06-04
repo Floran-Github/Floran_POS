@@ -37,6 +37,8 @@ import Reservation from "./components/Pages/hotel room booking/Reservation";
 import CustomerPage from "./components/Pages/hotel room booking/CustomerPage";
 import ExistingCustomer from "./components/Pages/hotel room booking/ExistingCustomer";
 import BookingRoom from "./components/Pages/hotel room booking/BookingRoom";
+import Roompage from "./components/Pages/hotel room booking/Roompage";
+import RoomType from "./components/Pages/hotel room booking/RoomType";
 
 export class App extends Component {
   async componentDidMount() {
@@ -141,6 +143,16 @@ export class App extends Component {
                     exact
                     path="/rooms/edit"
                     component={RoomEdit}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/rooms"
+                    component={Roompage}
+                  ></AuthReqRoute>
+                  <AuthReqRoute
+                    exact
+                    path="/rooms/types"
+                    component={RoomType}
                   ></AuthReqRoute>
                   <AuthReqRoute
                     exact

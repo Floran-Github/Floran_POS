@@ -273,15 +273,12 @@ export class FoodOrderingPage extends Component {
                 <option value="none" disabled>
                   Select the customer
                 </option>
-                <option key={1} value={1}>
-                  Khan Zaki
+                {this.props.customers.map((value,index) => (
+
+                <option key={1} value={value.id}>
+                  {value.name}
                 </option>
-                <option key={2} value={2}>
-                  Khan Farhan
-                </option>
-                <option key={3} value={3}>
-                  Daniyal Dolare
-                </option>
+                ))}
               </select>
             </div>
             <br />

@@ -1,7 +1,7 @@
 import React, { Component,Fragment } from 'react'
 import { connect } from 'react-redux';
 import { getOrders } from '../../../actions/order';
-
+import { Link } from 'react-router-dom';
 export class OrderPage extends Component {
     
     componentDidMount(){
@@ -80,7 +80,7 @@ export class OrderPage extends Component {
                                                     </div>
                                                 </div>
                                                 <div className="row">
-                                                    <a href="/" className="btn btn-secondary">Re-Order</a>
+                                                    <Link to="/restaurant/inventory" className='btn btn-secondary'>Re-Order</Link>
                                                 </div>
                                             </div>
                                         </div>

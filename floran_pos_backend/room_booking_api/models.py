@@ -4,11 +4,11 @@ from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 
 class RoomType(models.Model):
-    user_linked = models.ForeignKey(User,on_delete=models.CASCADE)
+    user_linked = models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
     roomType = models.CharField(max_length=20)
 
 class Room(models.Model):
-    user_linked = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_linked = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True)
     room_number = models.IntegerField()
     room_type = models.ForeignKey(RoomType,on_delete=models.CASCADE)
     number_of_person = models.IntegerField()
@@ -24,7 +24,7 @@ class RoomAvailability(models.Model):
 
 
 class CustomerDetail(models.Model):
-    user_linked = models.ForeignKey(User,on_delete=models.CASCADE)
+    user_linked = models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
     name = models.CharField(max_length=100)
     age = models.IntegerField()
     is_married = models.BooleanField(default=False)

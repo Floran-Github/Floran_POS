@@ -8,6 +8,10 @@ from datetime import date as dd
 from django.utils import timezone
 import calendar
 
+
+class roomTypeAPI(viewsets.ModelViewSet):
+    serializer_class = roomTypeSerializer
+    permission_classes = [permissions.IsAuthenticated]
 # Create your views here.
 class room(viewsets.ModelViewSet):
 
@@ -15,6 +19,12 @@ class room(viewsets.ModelViewSet):
     permission_classes = [
         permissions.IsAuthenticated
     ]
+
+    def get_queryset(self):
+        return RoomType.objects.filter(user_linked=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(user_linked=self.request.user)
 
     # get all room for current user
     def get_queryset(self):

@@ -45,6 +45,9 @@ export const GET_BOOKING = "GET_BOOKING";
 
 export const GET_ROOM = "GET_ROOM";
 
+export const GET_ROOM_TYPE = "GET_ROOM_TYPE";
+export const CREATE_ROOM_TYPE = "CREATE_ROOM_TYPE";
+
 // export const BASE_URL = "http://192.168.0.6:8000/";
-// export const BASE_URL = "http://192.168.43.187:8000/";
-export const BASE_URL = "http://192.168.0.202:8000/";
+export const BASE_URL = "http://192.168.43.187:8000/";
+// export const BASE_URL = "http://192.168.0.202:8000/";

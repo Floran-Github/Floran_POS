@@ -22,7 +22,7 @@ export class orderList extends Component {
                       <h3 className="col-6">
                         <b>Customer Name:</b>
                       </h3>
-                      <h3 className="col-6">Khan Zaki</h3>
+                      <h3 className="col-6">Khan Farhan</h3>
                     </div>
                   </div>
                   <div className="col-12">
@@ -50,6 +50,24 @@ export class orderList extends Component {
                         <h3>Small Cola</h3>
                       </div>
                       <div className="col-4">Qty: 1</div>
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="row">
+                          <button className="btn btn-primary">
+                            Preparing
+                          </button>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="row">
+                          <button className="btn btn-success">
+                            Prepared
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
